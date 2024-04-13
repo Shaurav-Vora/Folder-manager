@@ -2,7 +2,6 @@ import tkinter
 from tkinter import filedialog
 import os
 import webbrowser
-import markdown2
 
 def center_window(window):
     window.update_idletasks()
@@ -13,14 +12,6 @@ def center_window(window):
     window.geometry('{}x{}+{}+{}'.format(width, height, x, y))
 
 def openHelp():
-    path = "Help.md"
-    with open("Help.md") as file:
-        content = file.read()
-    html = markdown2.markdown(content)
-
-    with open("Help.html", "w") as file:
-        file.write(html)
-
     webbrowser.open("Help.html")
 
 def subfolder_required():
